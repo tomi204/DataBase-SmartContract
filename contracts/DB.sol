@@ -43,4 +43,7 @@ contract DataBase {
     function setAdmin(address _newAdmin) public onlyOwner{
         admin[_newAdmin] = true;
     }
+     function deleteUser(address wallet, uint256 memId) external {
+            delete member[memId][wallet];
+    }
 }
