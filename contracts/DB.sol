@@ -47,7 +47,7 @@ contract DataBase {
         admin[_newAdmin] = true;
     }
     //@dev delete user function
-     function deleteUser(address wallet, uint256 memId) external {
+     function deleteUser(address wallet, uint256 memId) external onlyAdmin{
             delete member[memId][wallet];
     }
 }
